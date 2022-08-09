@@ -1,0 +1,411 @@
+
+ /*Estilos del formulario creado como prueba*/
+
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #dbdbdb ;
+  
+}
+main{
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+}
+h1{
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+.formulario{
+    
+   
+    margin-top: 30px;
+    
+}
+#grupo__nombre{
+    margin-bottom: 10px;
+}
+/*en el grupo dos está la sección de características y datos del vendedor*/
+.grupo2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.formulario__label{
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: #0075ff;
+    background-color: #dbdbdb;
+}
+.formulario__grupo-input{
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 5px;
+    
+}
+
+#caracteristicas-y-btn{
+    height: 140px;
+    background-color: #ffff;
+    display: grid;
+    grid-template-columns:  1.5fr 0.5fr ;
+    gap: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+
+}
+
+#button-carac{
+    background-color: #97c7d5;
+    border-radius: 5px;
+    padding: 5px;
+    height: 40px;   
+    margin-top: 12px;
+    margin-right: 5px;
+    border: 0;
+    box-shadow: 1px 1px 1px  #8888885e;
+
+}
+#caracteristicas{
+    margin-top: 10px;
+    margin-left: 5px;
+    background-color: #c4c4c4;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+   
+   
+   
+    
+}
+#caracteristicas::placeholder{
+    
+    font-size: 15px;
+    
+}
+.formulario__input{
+    width: 100%;
+    background-color: #c4c4c4;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+   
+   
+    
+}
+::placeholder { 
+    color: #f4f4f4; 
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+
+}
+.formulario__input:focus{
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+
+}
+.formulario__input-error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;  /*muestra el texto con el aviso*/
+}
+.formulario__input-error-activo{
+    display: block;
+    color: #bb2929;
+    font-size: 12px;
+}
+.formulario__validacion-estado{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+    
+}
+ .marca-nombre{
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+    
+    
+}
+.marca-ape{
+    position: absolute;
+    right: 8px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+    
+    
+}
+
+.marca-doc   { 
+    position: absolute;
+    right: 8px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+
+
+}
+/* .formulario__grupo-input{
+
+    
+    border: 0;
+
+    
+} */
+
+#imagen {
+    text-align: center;
+    border-radius: 5px;
+    align-items: center;
+}
+
+#archivoInput{
+    
+    display: none;
+   
+    
+   
+}
+.labelSubir{
+    background-color: #bd1313;
+    padding: 15px;
+    border-radius: 5px;
+    
+ 
+    
+}
+.reemplazar{
+    display: none;
+   
+        background-color: #0075ff;
+        width: auto;
+        height: 45px;
+        line-height: 45px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+       
+    
+   
+}
+#subir-producto input{
+    background-color:  #d78d58 ;
+    font-size: 20px;
+    /* width: 100%; */
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 10px;
+   
+}
+
+.formulario__mensaje,
+.formulario__grupo-btn-enviar{
+    grid-column: span 2;
+}
+.formulario__mensaje{
+    height: 45px;
+    line-height: 45px;
+    background-color: #f66060;
+    padding: 0px 15px;
+    border-radius: 3px;
+    display: none;
+}
+.formulario__mensaje-activo{
+    display: block;
+}
+.formulario__mensaje p{
+    margin: 0;
+}
+.formulario__grupo-btn-enviar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario__btn{
+    height: 45px;
+    line-height: 45px;
+    width: 100%;
+    background-color: #d78d58 ;
+    color: #000;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s ease all;
+    font-size: 25px;
+    margin-top: 10px;
+}
+.formulario__btn:hover{
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}
+.formulario__mensaje-exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+
+}
+.formulario__mensaje-exito-activo{
+    display: block;
+}
+
+/*ESTILOS DE DATOS DEL VENDEDOR*/
+
+/* #grupo__datosVendedor{
+    
+    
+    ;
+    
+    
+} */
+.datos-vendedor{
+   
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    
+
+}
+
+#numero-documento-tipo{
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    gap: 5px;
+}
+
+select  {   
+   border-radius: 5px;
+   height: 45px;
+   width: 100%;
+   background-color:#c4c4c4 ;
+
+}
+#color{
+    background-color: #f4f4f4 ;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+#color input{
+    
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    
+}
+
+#valueInput{
+    
+    margin-top: -40px;
+    margin-left: 5px;
+}
+
+/*FIN ESTILOS DE DATOS DEL VENDEDOR*/
+/* -------estilos validacion */
+
+.formulario__grupo-correcto .formulario__validacion-estado{
+    color: #1ed12d;
+    opacity: 1;
+    bottom: 18px;
+    right: 15px;
+    
+}
+.formulario__grupo-correcto .formulario__validacion-estado-nombre{
+    color: #1ed12d;
+    opacity: 1;
+    bottom: 18px;
+    right: 15px;
+    
+}
+.formulario__borrar-icono{
+    display: none;
+}
+.formulario__grupo-correcto .formulario__validacion-estado-apellido{
+    color: #1ed12d;
+    opacity: 1;
+    bottom: 18px;
+    right: 15px;
+}
+.formulario__grupo-correcto .formulario__validacion-estado-doc{
+    color: #1ed12d;
+    opacity: 1;
+    bottom: 18px;
+    right: 15px;
+}
+.formulario__grupo-incorrecto .formulario__label{
+    color: #bb2929;
+}
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+    opacity: 1;
+    color: #bb2929;
+    bottom: 18px;
+    right: 15px;
+}
+.formulario__grupo-incorrecto .formulario__validacion-estado-nombre{
+    opacity: 1;
+    color: #bb2929;
+    bottom: 34px;
+    right: 15px;
+
+}
+.formulario__grupo-incorrecto .formulario__validacion-estado-apellido{
+    opacity: 1;
+    color: #bb2929;
+    bottom: 34px;
+    right: 15px;
+
+}
+.formulario__grupo-incorrecto .formulario__validacion-estado-doc{
+    opacity: 1;
+    color: #bb2929;
+    bottom: 34px;
+    right: 15px;
+
+}
+.formulario__grupo-vacio {
+    border: 3px solid #bb2929;
+}
+.formulario__grupo-vacio-correcto {
+    border: 3px solid #94bb29;
+}
+.formulario__grupo-incorrecto .formulario__input  {
+    border: 3px solid #bb2929;
+}
+
+
+
+
+/*-------------@MEDIA QUERY*/
+@media screen and (max-width:800px) {
+    .formulario{
+        grid-template-columns: 1fr;
+    }
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar{
+    grid-column: span 1;
+    }
+    .formulario__btn{
+        width: 100%;
+    }
+
+}
