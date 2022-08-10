@@ -19,7 +19,7 @@
         
         <!-- ----------------------Título---------------------- -->
         
-        <!-- --------------------------inicio grupo nombre------------------ -->
+        <!-- --------------------------inicio grupo nombre del producto------------------ -->
         <div class="formulario__grupo" id="grupo__nombre">
 
             <div class="formulario__grupo-input">
@@ -29,133 +29,102 @@
             
             <p class="formulario__input-error"> Éste campo solo puede contener letras y máximo 20 carácteres</p>
         </div>
-         <!-- -------------------------fin -grupo nombre ------------------ -->
-
-
-          <!-- --------------------------inicio grupo descripcion------------------ -->
+         
+          <!-- --------------------------inicio grupo descripcion del producto------------------ -->
         <div class="formulario__grupo" id="grupo__descripcion">
 
             <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="descripcion_articulo" id="descripcion" placeholder="Descripcion del elemento">
+                <input type="text" class="formulario__input" name="descripcion_articulo" id="descripcion" 
+                    placeholder="Descripcion del elemento">
                 <i class=" formulario__validacion-estado fa-solid fa-circle-xmark"></i>
             </div>
 
             <p class="formulario__input-error"> Éste campo solo puede contener letras y máximo 200 carácteres</p>
         </div>
-         <!-- -------------------------fin -grupo descripcion ------------------ -->
-
-
-        <div class="grupo2">
-        <!-- --------------------------inicio grupo caracteristicas------------------ -->
-                <div class="formulario__grupo grupo__caracteristicas_contenedor" id="grupo__caracteristicas">
-                    
-                    <label for="caracteristicas" id="formulario__label_carac" class="formulario__label">Caracteristicas</label>
-                    
-                    <div class="formulario__grupo-input" id="caracteristicas-y-btn">
-                        <input type="text" class="formulario__input domTextElement" name="caracteristicas" id="caracteristicas" placeholder="Escriba la característica">
-                        <!-- inicio código del código de práctica -->
-
-                        <button id="button-carac" type="button"  onclick="getValueInput()"> 
-                            Añadir Carácterística 
-                        </button> 
-
-                        <div id="valueInput" name="valueInput" ></div>
-                        <!-- fin  código del código de práctica -->
-                        <i class=" formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                    </div>
-
-                    <p class="formulario__input-error"> Éste campo solo puede contener letras y máximo 200 carácteres</p>
-                </div>
-                <!-- -------------------------fin -grupo caracteristicas ------------------ -->
-
-
-
-            <!-- --------------------------inicio grupo datos del vendedor------------------ -->
-            <div class="formulario__grupo" id="datosGeneralesVendedor">
-                
-                <label for="datosVendedor" class="formulario__label" >Datos del Vendedor</label>
+         <!-- -------------------------inicio grupo nombre del vendedor ------------------ -->
+         <div class="formulario__grupo" id="grupo__nombre-vendedor">
             
-                    
-                        <div class="formulario__grupo-input" id="grupo__datosVendedor">
-                            <input type="text" class="formulario__input" name="nombre-vendedor" id="nombre__vendedor" placeholder="Nombre">
-                            <i class=" formulario__validacion-estado-nombre fa-solid fa-circle-xmark marca-nombre"></i>
-                            <p class="formulario__input-error"> Éste campo solo puede contener letras y máximo 200 carácteres</p>
-                        </div>
+            <label for="datosVendedor" class="formulario__label" >Datos del Vendedor</label>
 
-                        <div class="formulario__grupo-input" id="grupo__apellidoVendedor">
-                            <input type="text" class="formulario__input" name="apellidoVendedor" id="apellido__vendedor" placeholder="Apellido">
-                            <i class=" formulario__validacion-estado-apellido fa-solid fa-circle-xmark marca-ape"></i>
-                            <p class="formulario__input-error"> Éste campo solo puede contener letras y máximo 200 carácteres</p>
-                        </div>
-
-                        <div id="numero-documento-tipo">
-                            
-                            <div class="formulario__grupo-input" id="grupo__docVendedor">
-                                <input type="text" class="formulario__input" name="identificacionVendedor" id="numero-documento" placeholder="N° documento">
-                                <i class=" formulario__validacion-estado-doc fa-solid fa-circle-xmark marca-ape"></i>
-                                <p class="formulario__input-error"> Éste campo solo puede contener números</p>
-                            </div>
-            
-                            <select name="tipoIdentificacion" id="tipoIdentificacion">
-                                <option value="cc">CC</option>
-                                <option value="ti">TI</option>
-                                <option value="pa">PA</option>
-                                <option value="pa">DNI</option>
-                                <option value="otro">Otro</option>
-                           
-                            </select>
-                        </div>    
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="nombre-vendedor" id="nombreVendedor" 
+                    placeholder="Nombre del Vendedor">
+                <i class=" formulario__validacion-estado fa-solid fa-circle-xmark"></i>
             </div>
 
-            <div id="precio">
-                <label for="datosVendedor" class="formulario__label" >Precio</label>
-                    <div id="numero-documento-tipo">
-                        
-                        <div class="formulario__grupo-input" id="grupo__precio">
-                            <input type="text" class="formulario__input" name="precio" id="numero-documento" placeholder="N° documento">
-                            <i class=" formulario__validacion-estado-doc fa-solid fa-circle-xmark marca-ape"></i>
-                            <p class="formulario__input-error"> Éste campo solo puede contener números sin puntos ni comas</p>
-                        </div>
+            <p class="formulario__input-error"> Éste campo solo puede contener letras y máximo 200 carácteres</p>
+        </div>
+        <!-- -------------------------inicio grupo apellido del vendedor ------------------ -->
+        <div class="formulario__grupo" id="grupo__apellido-vendedor">
+            
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="apellido-vendedor" id="apellidoVendedor" 
+                    placeholder="Apellido del Vendedor">
+                <i class=" formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+
+            <p class="formulario__input-error"> Éste campo solo puede contener letras y máximo 200 carácteres</p>
+        </div>
+
         
-                        <select name="tipoIdentificacion" id="tipoIdentificacion">
-                            <option value="cc">COP</option>
-                            <option value="ti">USD</option>
-                            <option value="pa">EUR</option>
+            <!-- --------------------------inicio grupo documento del vendedor------------------ -->
+
+        <div class="formulario__grupo" id="grupo__identificacion-vendedor">
             
-                        </select>
-                    </div>
-            </div>
+                <div class="formulario__grupo-input">
+                    <input type="tel" class="formulario__input" name="identificacion-vendedor" id="identificacionVendedor" 
+                        placeholder="identificacion del Vendedor">
+                    <i class=" formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+    
+                <p class="formulario__input-error"> Éste campo solo puede contener números </p>
+        </div>
 
-
-                <div id="imagen">
+             <!-- --------------------------inicio grupo precio del artículo------------------ -->
+        <div class="formulario__grupo" id="grupo__precio-articulo">
+            
+                <div class="formulario__grupo-input">
+                    <input type="tel" class="formulario__input" name="precio-articulo" id="precio-articulo" 
+                         placeholder="Precio del artículo">
+                    <i class=" formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+    
+                <p class="formulario__input-error"> Éste campo solo puede contener números </p>
+        </div>
+        <!-- --------------------------inicio grupo imagen------------------ -->
+        
+        <div id="imagen">
                     
-                    <div id="visorArchivo">
-                        <img src="https://meyertimber.com/uploads/images/presets/product_page_normal/store/products/NO_IMAGE.jpg" alt="" width="500" height="375">  
-                    </div>  
-                    <label id="selecImg"   class="labelSubir" for="archivoInput">Seleccione una imagen para mostrar</label>
+             <div id="visorArchivo">
+                <img src="https://meyertimber.com/uploads/images/presets/product_page_normal/store/products/NO_IMAGE.jpg" alt="" 
+                    width="500" height="375">  
+            </div>  
+                    <label class="labelSubir" for="archivoInput">Seleccione una imagen para mostrar</label>
                     <label class="reemplazar" for="archivoInput">Quiero cambiar la imagen</label>
 
-                    
-                    <input type="file" id="archivoInput" name="archivoInput" class="col-md-offset-4 col-md-4" onchange="return validarExt()" multiple/>          
-            </div>
-
+                    <input type="file" id="archivoInput" name="archivoInput"  onchange="return validarExt()" multiple/>          
         </div>
-         <!-- -------------------------fin -grupo datosVendedor ------------------ -->
+       
         
-        
-       <!-- ----------------------subir producto---------------------- - -->
+       <!-- ---------------------mensaje llenar todos los campos---------------------- - -->
         <div class="formulario__mensaje" id="formulario__mensaje">
 
             <p><i class="fa-solid fa-triangle-exclamation"></i><b>Error:</b> Rellene todos los campos </p>
 
         </div>
 
+       <!-- ---------------------subir formulario---------------------- - -->
 
         <div class="formulario__grupo formulario__grupo-btn-enviar">
             <button type="submit" class="formulario__btn" >Subir Producto</button>
             <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El formulario se envió</p>
         </div>
    
+       <!-- --------------------Contenedor de los campos que van llenando-------------------- - -->
+
+       <!-- ---------------------,Modal--------------------- - -->
+
+
     
     </form>
 

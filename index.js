@@ -5,15 +5,15 @@ const inputs =document.querySelectorAll('#formulario input');
 
 
 const validarCaracteresInput = {
-	usuario2: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-    datos:/^[a-zA-ZÀ-ÿ\s]{1,20}$/,
+	
 	nombreArticulo: /^[a-zA-ZÀ-ÿ\s]{1,20}$/, // Letras y espacios, pueden llevar acentos.
     descripcionArticulo:/^[a-zA-ZÀ-ÿ\s_.+-]{1,200}$/,
-    caracteristicas:/^[a-zA-Z0-9À-ÿ\s_.+-]{1,200}$/,
-    cedula:/^\d{1,14}$/,
-	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+    //caracteristicas:/^[a-zA-Z0-9À-ÿ\s_.+-]{1,200}$/,
+    nombreVend:/^[a-zA-ZÀ-ÿ\s]{1,20}$/,
+    apellidoVen:/^[a-zA-ZÀ-ÿ\s]{1,20}$/,
+    identificacion:/^\d{1,14}$/,
+    precioArt:/^\d{1,14}$/,
+	
 
 }
 
@@ -24,11 +24,11 @@ const campos={
     caracInput:false
 }
 
-
 inputs.forEach((input)=>{
     input.addEventListener('keyup',validarFormulario)
 });
 
+// caracteristicas----------------------------
 let valores=[];
 const contenedorValores=document.getElementById('valueInput');
 
@@ -111,16 +111,7 @@ formulario.addEventListener('submit',(e)=>{
         document.getElementById('grupo__descripcion').classList.add('formulario__grupo-vacio');               
 
     }
-    if(valores.length==0){
-        
-        console.log('funciona');
-        document.getElementById('valueInput').classList.add('formulario__grupo-vacio');
-    }
-    else{
-        document.getElementById('valueInput').classList.add('formulario__borrar-icono');
-      //  document.getElementById('valueInput').value="";
-        //document.getElementsByClassName("domTextElement")[0].value="";
-    }
+
    
 });
 

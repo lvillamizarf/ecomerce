@@ -1,8 +1,10 @@
 
 
 const validarFormulario=(e)=>{
+   
     // console.log(e.target); // este es el evento
     switch(e.target.name){ // aquí se accede al atributo name
+
         case"nombre-articulo":
             if(validarCaracteresInput.nombreArticulo.test(e.target.value)){
                 manipularClasesValido(seccionesInput.Nombre_articulo);
@@ -10,110 +12,72 @@ const validarFormulario=(e)=>{
             }
             else{
                 manipularClasesInvalido(seccionesInput.Nombre_articulo);
+                
                // campos['nombre-articulo']=false;
             }
         break;
 
         case"descripcion_articulo":
-        if(validarCaracteresInput.descripcionArticulo.test(e.target.value)){
-            manipularClasesValido(seccionesInput.Descripcion_articulo);
-            //campos['descripcion']=true;
-        }
-        else{
-            manipularClasesInvalido(seccionesInput.Descripcion_articulo);
-            //campos['descripcion']=false;
-        }
+            if(validarCaracteresInput.descripcionArticulo.test(e.target.value)){
+                manipularClasesValido(seccionesInput.Descripcion_articulo);
+                //campos['descripcion']=true;
+            }
+            else{
+                manipularClasesInvalido(seccionesInput.Descripcion_articulo);
+                //campos['descripcion']=false;
+            }
         break;
  
-        case"datosVendedor":datosVendedor
-        if(expresiones.descripcion.test(e.target.value)){
-            manipularClasesValido(grupos.Descripcion);
-            campos['descripcion']=true;
-            
-        }
-        else{
-            manipularClasesInvalido(grupos.Descripcion);
-            campos['descripcion']=false;
-        }
+        case"nombre-vendedor":
+            if(validarCaracteresInput.nombreVend.test(e.target.value)){
+                manipularClasesValido(seccionesInput.nombreVendedor);
+                //campos['descripcion']=true;
+            }
+            else{
+                manipularClasesInvalido(seccionesInput.nombreVendedor);
+                //campos['descripcion']=false;
+            }
         
         break;
 
-
-        case"apellidoVendedor":
-        if(expresiones.descripcion.test(e.target.value)){
-            
-            document.getElementById('grupo__apellidoVendedor').classList.remove('formulario__grupo-incorrecto');
-            document.getElementById('grupo__apellidoVendedor').classList.add('formulario__grupo-correcto');
-            document.querySelector('#grupo__apellidoVendedor i').classList.remove('fa-solid');
-            document.querySelector('#grupo__apellidoVendedor i').classList.remove('fa-circle-xmark');
-            document.querySelector('#grupo__apellidoVendedor i').classList.add('fa-solid');
-            document.querySelector('#grupo__apellidoVendedor i').classList.add('fa-circle-check');
-            document.querySelector('#grupo__apellidoVendedor .formulario__input-error').classList.remove('formulario__input-error-activo');
-        }
-        else{
-            document.getElementById('grupo__apellidoVendedor').classList.add('formulario__grupo-incorrecto');
-            document.getElementById('grupo__apellidoVendedor').classList.remove('formulario__grupo-correcto');
-            document.querySelector('#grupo__apellidoVendedor i').classList.add('fa-solid');
-            document.querySelector('#grupo__apellidoVendedor i').classList.add('fa-circle-xmark');
-            document.querySelector('#grupo__apellidoVendedor .formulario__input-error').classList.add('formulario__input-error-activo');
-           
-        }
-        
+        case"apellido-vendedor":
+            if(validarCaracteresInput.apellidoVen.test(e.target.value)){
+                manipularClasesValido(seccionesInput.apellidoVen);
+                //campos['descripcion']=true;
+            }
+            else{
+                manipularClasesInvalido(seccionesInput.apellidoVen);
+                //campos['descripcion']=false;
+            }
+    
         break;
 
+        case"identificacion-vendedor":
+            if(validarCaracteresInput.identificacion.test(e.target.value)){
+                manipularClasesValido(seccionesInput.indenti_vendedor);
+                //campos['descripcion']=true;
+            }
+            else{
+                manipularClasesInvalido(seccionesInput.indenti_vendedor);
+                //campos['descripcion']=false;
+            }
 
-        case"identificacionVendedor":
-        if(expresiones.cedula.test(e.target.value)){
-            
-            document.getElementById('grupo__docVendedor').classList.remove('formulario__grupo-incorrecto');
-            document.getElementById('grupo__docVendedor').classList.add('formulario__grupo-correcto');
-            document.querySelector('#grupo__docVendedor i').classList.remove('fa-solid');
-            document.querySelector('#grupo__docVendedor i').classList.remove('fa-circle-xmark');
-            document.querySelector('#grupo__docVendedor i').classList.add('fa-solid');
-            document.querySelector('#grupo__docVendedor i').classList.add('fa-circle-check');
-            document.querySelector('#grupo__docVendedor .formulario__input-error').classList.remove('formulario__input-error-activo');
-        }
-        else{
-            document.getElementById('grupo__docVendedor').classList.add('formulario__grupo-incorrecto');
-            document.getElementById('grupo__docVendedor').classList.remove('formulario__grupo-correcto');
-            document.querySelector('#grupo__docVendedor i').classList.add('fa-solid');
-            document.querySelector('#grupo__docVendedor i').classList.add('fa-circle-xmark');
-            document.querySelector('#grupo__docVendedor .formulario__input-error').classList.add('formulario__input-error-activo');
-           
-           
-        }
-        
         break;
-        case"precio":
-        if(expresiones.cedula.test(e.target.value)){
-        
-            document.getElementById('grupo__precio').classList.remove('formulario__grupo-incorrecto');
-            document.getElementById('grupo__precio').classList.add('formulario__grupo-correcto');
-            document.querySelector('#grupo__precio i').classList.remove('fa-solid');
-            document.querySelector('#grupo__precio i').classList.remove('fa-circle-xmark');
-            document.querySelector('#grupo__precio i').classList.add('fa-solid');
-            document.querySelector('#grupo__precio i').classList.add('fa-circle-check');
-            document.querySelector('#grupo__precio .formulario__input-error').classList.remove('formulario__input-error-activo');
-        }
-        else{
-            document.getElementById('grupo__precio').classList.add('formulario__grupo-incorrecto');
-            document.getElementById('grupo__precio').classList.remove('formulario__grupo-correcto');
-            document.querySelector('#grupo__precio i').classList.add('fa-solid');
-            document.querySelector('#grupo__precio i').classList.add('fa-circle-xmark');
-            document.querySelector('#grupo__precio .formulario__input-error').classList.add('formulario__input-error-activo');
-           
-           
-        }
-        
+
+        case"precio-articulo":
+            if(validarCaracteresInput.precioArt.test(e.target.value))
+            {
+                manipularClasesValido(seccionesInput.precioArticulo);
+                //campos['descripcion']=true;
+            }
+            else{
+                manipularClasesInvalido(seccionesInput.precioArticulo);
+                //campos['descripcion']=false;
+            }
+
         break;
+
+   
         
-        // case "valueInput":
-        //     if(getValueInput.length===0){
-        //         console.log('funciona');
-        //     }
-        //     else{
-        //         console.log('no está vacío');
-        //     }
-        // break;
     };
 }

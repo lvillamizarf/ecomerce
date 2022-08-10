@@ -22,20 +22,30 @@ h1{
     text-align: center;
 }
 .formulario{
-    
-   
+       
     margin-top: 30px;
     
 }
 #grupo__nombre{
     margin-bottom: 10px;
 }
-/*en el grupo dos está la sección de características y datos del vendedor*/
-.grupo2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+#grupo__descripcion{
+    margin-bottom: 10px;
 }
+#grupo__nombre-vendedor{
+    margin-bottom: 10px;
+}
+#grupo__apellido-vendedor{
+    margin-bottom: 10px;
+}
+#grupo__identificacion-vendedor{
+    margin-bottom: 10px;
+}
+#grupo__precio-articulo{
+    margin-bottom: 10px;
+}
+
+
 .formulario__label{
     display: block;
     font-weight: 700;
@@ -80,10 +90,7 @@ h1{
     margin-left: 5px;
     background-color: #c4c4c4;
     border: 1px solid rgba(0, 0, 0, 0.267);
-   
-   
-   
-    
+       
 }
 #caracteristicas::placeholder{
     
@@ -134,89 +141,50 @@ h1{
     opacity: 0;
     
 }
- .marca-nombre{
-    position: absolute;
-    right: 8px;
-    bottom: 10px;
-    z-index: 100;
-    font-size: 16px;
-    opacity: 0;
-    
-    
-}
-.marca-ape{
-    position: absolute;
-    right: 8px;
-    bottom: 15px;
-    z-index: 100;
-    font-size: 16px;
-    opacity: 0;
-    
-    
-}
-
-.marca-doc   { 
-    position: absolute;
-    right: 8px;
-    bottom: 15px;
-    z-index: 100;
-    font-size: 16px;
-    opacity: 0;
-
-
-}
-/* .formulario__grupo-input{
-
-    
-    border: 0;
-
-    
-} */
 
 #imagen {
     text-align: center;
     border-radius: 5px;
     align-items: center;
+   
+}
+#visorArchivo{
+    margin-bottom: 20px;
+}
+.formulario__mensaje{
+    margin-top: 10px;
+}
+.formulario__grupo-btn-enviar{
+    margin-top: 10px;
 }
 
 #archivoInput{
     
     display: none;
-   
-    
-   
+  
 }
 .labelSubir{
-    background-color: #bd1313;
+    background-color: #bd131357;
     padding: 15px;
-    border-radius: 5px;
-    
- 
-    
+    border-radius: 5px;   
+    margin-top: 20px;     
 }
 .reemplazar{
     display: none;
    
         background-color: #0075ff;
-        width: auto;
-        height: 45px;
-        line-height: 45px;
-        margin-bottom: 10px;
-        border-radius: 5px;
+        padding: 15px;
+        border-radius: 5px;   
+        margin-top: 20px; 
+        width:20%;
+        margin-left: auto;
+        margin-right: auto;
+        
        
     
    
 }
-#subir-producto input{
-    background-color:  #d78d58 ;
-    font-size: 20px;
-    /* width: 100%; */
-    padding: 10px;
-    border-radius: 5px;
-    border: 0;
-    margin-top: 10px;
-   
-}
+
 
 .formulario__mensaje,
 .formulario__grupo-btn-enviar{
@@ -270,13 +238,7 @@ h1{
 
 /*ESTILOS DE DATOS DEL VENDEDOR*/
 
-/* #grupo__datosVendedor{
-    
-    
-    ;
-    
-    
-} */
+
 .datos-vendedor{
    
     border-radius: 5px;
@@ -299,26 +261,14 @@ select  {
    background-color:#c4c4c4 ;
 
 }
-#color{
-    background-color: #f4f4f4 ;
-    border: 1px solid rgba(0, 0, 0, 0.267);
-    border-radius: 5px;
-    padding: 10px;
-    
-}
-#color input{
-    
-    border: 1px solid rgba(0, 0, 0, 0.267);
-    border-radius: 5px;
-    margin-bottom: 5px;
-    
-}
+
 
 #valueInput{
     
     margin-top: -40px;
     margin-left: 5px;
 }
+
 
 /*FIN ESTILOS DE DATOS DEL VENDEDOR*/
 /* -------estilos validacion */
@@ -330,28 +280,7 @@ select  {
     right: 15px;
     
 }
-.formulario__grupo-correcto .formulario__validacion-estado-nombre{
-    color: #1ed12d;
-    opacity: 1;
-    bottom: 18px;
-    right: 15px;
-    
-}
-.formulario__borrar-icono{
-    display: none;
-}
-.formulario__grupo-correcto .formulario__validacion-estado-apellido{
-    color: #1ed12d;
-    opacity: 1;
-    bottom: 18px;
-    right: 15px;
-}
-.formulario__grupo-correcto .formulario__validacion-estado-doc{
-    color: #1ed12d;
-    opacity: 1;
-    bottom: 18px;
-    right: 15px;
-}
+
 .formulario__grupo-incorrecto .formulario__label{
     color: #bb2929;
 }
@@ -361,33 +290,7 @@ select  {
     bottom: 18px;
     right: 15px;
 }
-.formulario__grupo-incorrecto .formulario__validacion-estado-nombre{
-    opacity: 1;
-    color: #bb2929;
-    bottom: 34px;
-    right: 15px;
 
-}
-.formulario__grupo-incorrecto .formulario__validacion-estado-apellido{
-    opacity: 1;
-    color: #bb2929;
-    bottom: 34px;
-    right: 15px;
-
-}
-.formulario__grupo-incorrecto .formulario__validacion-estado-doc{
-    opacity: 1;
-    color: #bb2929;
-    bottom: 34px;
-    right: 15px;
-
-}
-.formulario__grupo-vacio {
-    border: 3px solid #bb2929;
-}
-.formulario__grupo-vacio-correcto {
-    border: 3px solid #94bb29;
-}
 .formulario__grupo-incorrecto .formulario__input  {
     border: 3px solid #bb2929;
 }

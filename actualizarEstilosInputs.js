@@ -2,6 +2,7 @@
 
 
 function manipularClasesValido(grupo) {
+    
     document.querySelector(grupo).classList.add('formulario__grupo-correcto');
     document.querySelector(grupo+' i').classList.remove('fa-circle-xmark');
     document.querySelector(grupo+' i').classList.add('fa-circle-check');
